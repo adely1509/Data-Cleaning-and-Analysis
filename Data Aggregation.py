@@ -67,9 +67,8 @@ for i in happiness_2015['Region']:
 'To create a GroupBy object, we use the DataFrame.groupby() method: df.groupby('col') where col is the column you want to use to group the data set. Note that you can also group the data set on multiple columns by passing a list into the DataFrame.groupby() method. However, for teaching purposes, we'll focus on grouping the data by just one column in this mission.
 'When choosing the column, think about which columns could be used to split the data set into groups. To put it another way, look at columns with the same value for multiple rows.'''
 
-'Instructions
-'Use the df.groupby() method to group happiness2015 by the Region column. Assign the result to grouped.
-'Use the GroupBy.get_group() method to select the data for the Australia and New Zealand group only. Assign the result to aus_nz.'
+'''Instructions: Use the df.groupby() method to group happiness2015 by the Region column. Assign the result to grouped.
+Use the GroupBy.get_group() method to select the data for the Australia and New Zealand group only. Assign the result to aus_nz.'''
 
 grouped = happiness_2015.groupby('Region')
 aus_nz = grouped.get_group('Australia and New Zealand')
@@ -79,7 +78,7 @@ grouped = happiness_2015.groupby('Region')
 grouped.groups
 'The result is a dictionary in which each key corresponds to a region name.'
 'Notice that the values include the index for each row in the original happiness2015 dataframe with the corresponding region name'
-'For the following exercise, use the result from the dictionary returned by grouped.groups shown below:
+'''For the following exercise, use the result from the dictionary returned by grouped.groups shown below:'''
 
 '''North America': Int64Index([4, 14], dtype=int64'''
 '''Prove that the values for the North America group in the dictionary returned by grouped.groups above correspond to countries in North America in the happiness2015 dataframe.
