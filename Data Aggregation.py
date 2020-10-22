@@ -14,6 +14,7 @@ import numpy as np
 
 
 
+
 happiness_2015 = pd.read_csv("World_Happiness_2015.csv")
 first_5 = happiness_2015[:5]
 first_5.info
